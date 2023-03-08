@@ -4,6 +4,7 @@ def encoder(word):
     # for loop for encoding each digit in string
     for char in word:
         encoded_word = encoded_word + str((int(char) + 3) % 10)  # shifting 3 digit
+    print("Your password has been encoded and stored!")
     return encoded_word
 
 def decoder(word):
@@ -20,10 +21,8 @@ def main():
         if menu_var == "1":
             password = input("Please enter your password to encode: ")
             encoder(password)
-            print("Your password has been encoded and stored!")
         elif menu_var == "2":
             decoder(password)
-            print(f"The encoded password is {password}, and the original password is {password}.")
         elif menu_var == "3":
             break
         else:
