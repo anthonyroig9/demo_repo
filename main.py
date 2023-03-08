@@ -20,9 +20,12 @@ def main():
         menu_var = input("Please enter an option: ")
         if menu_var == "1":
             password = input("Please enter your password to encode: ")
-            encoder(password)
+            encoded_word = encoder(password)
         elif menu_var == "2":
-            decoder(password)
+            if not encoded_word:
+                print("Please encode a password first.")
+            else:
+                print(f"The encoded password is {encoded_word}, and the original password is {decoder(encoded_word)}.")
         elif menu_var == "3":
             break
         else:
