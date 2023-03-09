@@ -7,8 +7,14 @@ def encoder(word):
     print("Your password has been encoded and stored!")
     return encoded_word
 
+
 def decoder(word):
-    pass
+    decoded_word = ""
+    for char in word:
+        digit = int(char) - 3
+        decoded_word += str(digit)
+    return decoded_word
+
 
 def main():
     while True:
